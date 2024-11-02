@@ -100,6 +100,7 @@ class Landing extends React.Component<Props> {
                     <div className="pg-landing-screen__market-info__wrap__title">
                         <h1>{this.translate('page.body.landing.marketInfo.title.text1')}</h1>
                         <h1>{this.translate('page.body.landing.marketInfo.title.text2')}</h1>
+                        <h2>{this.translate('page.body.landing.marketInfo.title.text3')}</h2>
                         <Link to="/trading" className="landing-button">
                             {this.translate('page.body.landing.marketInfo.title.button')}
                         </Link>
@@ -259,6 +260,8 @@ class Landing extends React.Component<Props> {
                     </div>
                     <div className="pg-landing-screen__footer__wrap__navigation">
                         <div className="pg-landing-screen__footer__wrap__navigation__col">
+                            <Link to="/mining/">{this.translate('page.body.landing.footer.mining')}</Link>
+                            <Link to="/staking/">{this.translate('page.body.landing.footer.staking')}</Link>
                             <Link to="/trading/">{this.translate('page.body.landing.footer.exchange')}</Link>
                             <Link to="/wallets">{this.translate('page.body.landing.footer.wallets')}</Link>
                             <Link to="/">{this.translate('page.body.landing.footer.fees')}</Link>

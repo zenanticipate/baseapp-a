@@ -28,7 +28,6 @@ import {
     SelectedWalletMobileScreen,
     SignInMobileScreen,
     SignUpMobileScreen,
-    TradingScreenMobile,
     WalletDeposit,
     WalletsMobileScreen,
     WalletWithdraw,
@@ -78,7 +77,7 @@ import {
     RestrictedScreen,
     SignInScreen,
     SignUpScreen,
-    TradingScreen,
+    MiningScreen,
     VerificationScreen,
     WalletsScreen,
 } from '../../screens';
@@ -329,7 +328,6 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
                         <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/profile/verification" component={ProfileVerificationMobileScreen} />
                         <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/profile/theme" component={ProfileThemeMobileScreen} />
                         <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/profile" component={ProfileMobileScreen} />
-                        <Route exact={true} path="/trading/:market?" component={TradingScreenMobile} />
                         {showLanding() && <Route exact={true} path="/" component={LandingScreenMobile} />}
                         <Route path="**"><Redirect to="/trading/" /></Route>
                     </Switch>
@@ -351,7 +349,6 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
                     <PublicRoute loading={userLoading} isLogged={isLoggedIn} path="/email-verification" component={EmailVerificationScreen} />
                     <Route path="/404" component={RestrictedScreen} />
                     <Route path="/500" component={MaintenanceScreen} />
-                    <Route exact={true} path="/trading/:market?" component={TradingScreen} />
                     {showLanding() && <Route exact={true} path="/" component={LandingScreen} />}
                     <PrivateRoute exact={true} loading={userLoading} isLogged={isLoggedIn} path="/docs" component={DocumentationScreen} />
                     <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/orders" component={OrdersTabScreen} />
@@ -359,6 +356,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
                     <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/confirm" component={ConfirmScreen} />
                     <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/profile" component={ProfileScreen} />
                     <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/wallets" component={WalletsScreen} />
+                    <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/mining" component={MiningScreen} />
                     <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/security/2fa" component={ProfileTwoFactorAuthScreen} />
                     <Route path="**"><Redirect to="/trading/" /></Route>
                 </Switch>

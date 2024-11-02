@@ -1,17 +1,12 @@
-export const PG_TITLE_PREFIX = 'Cryptobase';
+export const PG_TITLE_PREFIX = 'Triple Zen Chateau';
 
 export const pgRoutes = (isLoggedIn: boolean, isLight?: boolean): string[][] => {
     const routes = [
-        ['page.header.navbar.trade', '/trading/', `trade${isLight ? 'Light' : ''}`],
-        ['page.header.navbar.wallets', '/wallets', `wallets${isLight ? 'Light' : ''}`],
-        ['page.header.navbar.openOrders', '/orders', `orders${isLight ? 'Light' : ''}`],
-        ['page.header.navbar.history', '/history', `history${isLight ? 'Light' : ''}`],
-        ['page.header.navbar.api', '/docs', `api${isLight ? 'Light' : ''}`],
+        ['page.header.navbar.mining', '/mining', `mining${isLight ? 'Light' : ''}`],
     ];
     const routesUnloggedIn = [
         ['page.header.navbar.signIn', '/signin', `signin${isLight ? 'Light' : ''}`],
         ['page.header.signUp', '/signup', `signup${isLight ? 'Light' : ''}`],
-        ['page.header.navbar.trade', '/trading/', `trade${isLight ? 'Light' : ''}`],
     ];
 
     return isLoggedIn ? routes : routesUnloggedIn;
@@ -19,8 +14,8 @@ export const pgRoutes = (isLoggedIn: boolean, isLight?: boolean): string[][] => 
 
 export const DEFAULT_CCY_PRECISION = 4;
 export const DEFAULT_TRADING_VIEW_INTERVAL = '15';
-export const VALUATION_PRIMARY_CURRENCY = 'USD';
-export const VALUATION_SECONDARY_CURRENCY = 'ETH';
+export const VALUATION_PRIMARY_CURRENCY = 'USDT';
+export const VALUATION_SECONDARY_CURRENCY = 'BTC';
 
 export const PASSWORD_ENTROPY_STEP = 6;
 

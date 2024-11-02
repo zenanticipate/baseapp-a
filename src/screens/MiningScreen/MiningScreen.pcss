@@ -1,0 +1,97 @@
+@import "../../containers/Mining/EstimatedValue/EstimatedValue.pcss";
+
+/* Mining Screen Container */
+.pg-mining {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: calc(var(--gap) * 2) !important;
+  max-width: 920px !important;
+  padding: 0 calc(var(--gap) * 2) !important;
+
+  /* Loading Indicator */
+  &__loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  /* Tabs */
+  &__tabs {
+    background: var(--tab-panel-background-color);
+    border-left: 1px solid var(--mining-item-border-color);
+  }
+
+  /* Tabs Content */
+  &__tabs-content {
+    background: var(--body-background-color);
+    display: flex;
+    min-height: 600px;
+    width: 100%;
+  }
+
+  /* Error Message */
+  &__error {
+    color: var(--system-red);
+    font-size: 1.2rem;
+    margin-left: calc(var(--gap) * 4);
+  }
+
+  /* Mining History Section */
+  .cr-mining-history {
+    color: var(--table-text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: calc(var(--gap) * 5) calc(var(--gap) * 3) calc(var(--gap) * 3);
+
+    /* History Row */
+    &__row {
+      border-bottom: 1px solid var(--mining-item-border-color);
+      display: flex;
+      padding: calc(var(--gap) * 3) 0;
+      align-items: center;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+
+    /* Other styles as needed... */
+  }
+
+  /* Wallet Item List */
+  .cr-wallet-list {
+    background-color: var(--mining-item-background-color);
+    margin: 0;
+
+    li {
+      padding: 0 !important;
+
+      &:last-child .cr-wallet-item {
+        border-bottom: 0.5px solid var(--mining-item-border-color);
+      }
+    }
+
+    /* Mining Item */
+    .cr-mining-item {
+      border-color: var(--mining-item-border-color);
+      background: var(--body-background-color);
+      cursor: pointer;
+      font-size: calc(var(--gap) * 2.66);
+      height: calc(var(--gap) * 9);
+      border-bottom: 1px solid var(--mining-item-border-color);
+      box-shadow: 0 0 2px var(--shadow-color-level-1);
+
+      &:hover {
+        background: var(--mining-item-background-color-hover);
+      }
+    }
+
+    /* Additional styles for mining items... */
+  }
+
+  /* Add any specific styles for MiningScreen functionality */
+}

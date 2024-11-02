@@ -59,7 +59,7 @@ export class Markets extends React.Component<MarketsProps, MarketsState> {
         };
     }
 
-    private defaultHeaders: string[] = ['Pair', 'Price', '24h Change'];
+    private defaultHeaders: string[] = ['Pair', '24h Change'];
 
     public componentWillReceiveProps(nextProps: MarketsProps) {
         if (nextProps.data !== this.props.data) {

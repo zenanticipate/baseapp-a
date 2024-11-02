@@ -14,5 +14,6 @@ export * from './SignUpScreen';
 export * from './TradingScreen';
 export * from './VerificationScreen';
 export * from './WalletsScreen';
+export * from './MiningScreen';
 export * from './RestrictedScreen';
 export * from './MaintenanceScreen';
